@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
     render json: @article
   end
 
+  
   # POST /articles
   def create
     jwt_payload = JWT.decode(request.headers["Authorization"].split(" ")[1],
