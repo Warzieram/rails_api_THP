@@ -35,7 +35,6 @@ const Login = () => {
         if (!response.ok) {
           throw new Error("Erreur lors de la requête");
         }
-        console.log(authHeader);
         cookies.set("token", authHeader, { path: "/" });
         return response.json();
       })

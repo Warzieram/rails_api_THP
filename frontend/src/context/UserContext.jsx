@@ -7,7 +7,6 @@ export const UserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(() => {
     // Récupérer l'utilisateur depuis localStorage au chargement
     const storedUser = localStorage.getItem("user");
-    console.log(storedUser);
     return storedUser ? JSON.parse(storedUser) : null;
   });
 

@@ -36,12 +36,10 @@ const Register = () => {
         if (!response.ok) {
           throw new Error("Erreur lors de la requête");
         }
-        console.log(authHeader);
         cookies.set("token", authHeader, { path: "/" });
         return response.json();
       })
       .then((data) => {
-        console.log(data.user);
         if (data.user) {
           setCurrentUser(data.user);
           navigate("/");
